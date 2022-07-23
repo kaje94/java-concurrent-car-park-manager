@@ -2,7 +2,6 @@ package classes.carPark;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 import classes.vehicles.Vehicle;
 
@@ -11,9 +10,9 @@ public class Space {
     private double occupiedPercentage;
     private List<Vehicle> occupiedVehicles;
 
-    public Space() {
-        this.id = UUID.randomUUID().toString();
-        this.occupiedPercentage = 0;
+    public Space(String id) {
+        this.id = id;
+        this.occupiedPercentage = 0.0;
         this.occupiedVehicles = new ArrayList<>();
     }
 
@@ -64,7 +63,7 @@ public class Space {
     public static List<Space> generateSpaces(int count) {
         List<Space> spaces = new ArrayList<>();
         for (int i = 1; i <= count; i++) {
-            spaces.add(new Space());
+            spaces.add(new Space((i) + ""));
         }
         return spaces;
     }

@@ -50,6 +50,7 @@ public class App {
                         break;
                     case 0:
                         System.exit(0);
+                        PettahCarParkManager.killThreadStates();
                         break;
                     default:
                         System.out.println("Invalid choice. Please enter a valid choice");
@@ -108,8 +109,6 @@ public class App {
 
             int choice = scanner.nextInt();
 
-            System.out.println("Enter floor number : ");
-            int floorNo = scanner.nextInt();
             VehicleType type;
             switch (choice) {
                 case 1:
@@ -138,7 +137,9 @@ public class App {
                     return;
             }
             Vehicle vehicle = Vehicle.createVehicle(type, scanner);
-            pettahCarParkManager.addVehicle(vehicle, floorNo, type);
+
+            // Add to queue
+            pettahCarParkManager.addVehicleToInGateQueue(vehicle);
         } catch (Exception e) {
             System.out.println("Something went wrong when adding vehicle:" + e.getMessage());
         }
@@ -148,7 +149,10 @@ public class App {
         try {
             System.out.println("Enter the Plate ID :");
             String plateID = scanner.next();
-            pettahCarParkManager.deleteVehicle(plateID);
+
+            Vehicle vehicle = pettahCarParkManager.getVehicleById(plateID);
+
+            pettahCarParkManager.addVehicleToOutGateQueue(vehicle);
         } catch (Exception e) {
             System.out.println("Something went wrong when removing vehicle:" + e.getMessage());
         }

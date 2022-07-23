@@ -5,10 +5,8 @@ import java.util.Scanner;
 public class Van extends Vehicle {
 	private final double REQUIRED_PARKING_SPACES = 2;
 
-	// Properties
 	private double cargoVolume;
 
-	// Constructor
 	public Van(Scanner scanner) {
 		super(scanner);
 		System.out.println("Enter the Cargo Capacity : ");
@@ -32,11 +30,6 @@ public class Van extends Vehicle {
 	@Override
 	public double getRequiredParkingSpaces() {
 		return REQUIRED_PARKING_SPACES;
-	}
-
-	@Override
-	public String toString() {
-		return "Vehicle Type: Van\n" + super.toString() + "\ncargoVolume:" + this.cargoVolume;
 	}
 
 	@Override

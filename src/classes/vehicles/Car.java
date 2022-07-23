@@ -49,11 +49,6 @@ public class Car extends Vehicle {
 	}
 
 	@Override
-	public String toString() {
-		return "Vehicle Type: Car\n" + super.toString() + "\nnumDoors:" + this.doors + "\ncolor:" + this.color;
-	}
-
-	@Override
 	public void printSummary() {
 		System.out.println("Vehicle Type: Car");
 		super.printSummary();

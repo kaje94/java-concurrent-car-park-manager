@@ -3,7 +3,7 @@ package classes.vehicles;
 import java.util.Scanner;
 
 public class MotorBike extends Vehicle {
-	private final double REQUIRED_PARKING_SPACES = 1 / 3;
+	private final double REQUIRED_PARKING_SPACES = 1.0 / 3.0;
 
 	private String engineSize;
 
@@ -30,11 +30,6 @@ public class MotorBike extends Vehicle {
 	@Override
 	public double getRequiredParkingSpaces() {
 		return REQUIRED_PARKING_SPACES;
-	}
-
-	@Override
-	public String toString() {
-		return "Vehicle Type: MotorBike\n" + super.toString() + "\nengineSize:" + this.engineSize;
 	}
 
 	@Override

@@ -33,11 +33,6 @@ public class Lorry extends Vehicle {
 	}
 
 	@Override
-	public String toString() {
-		return "Vehicle Type: Lorry\n" + super.toString() + "\ncargoType:" + this.cargoType;
-	}
-
-	@Override
 	public void printSummary() {
 		System.out.println("Vehicle Type: Lorry");
 		super.printSummary();

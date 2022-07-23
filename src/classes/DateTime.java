@@ -4,7 +4,6 @@ import java.util.Calendar;
 
 public class DateTime implements Comparable<DateTime> {
 
-	// Properties
 	private int year;
 	private int month;
 	private int date;
@@ -13,7 +12,6 @@ public class DateTime implements Comparable<DateTime> {
 	private int minutes;
 	private int seconds;
 
-	// Constructor
 	public DateTime(int year, int month, int date, int hours, int minutes, int seconds) {
 		super();
 		this.year = year;

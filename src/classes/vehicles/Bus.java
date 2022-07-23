@@ -33,11 +33,6 @@ public class Bus extends Vehicle {
 	}
 
 	@Override
-	public String toString() {
-		return "Vehicle Type: Bus\n" + super.toString() + "\nseatingCapacity:" + this.seatingCapacity;
-	}
-
-	@Override
 	public void printSummary() {
 		System.out.println("Vehicle Type: Bus");
 		super.printSummary();

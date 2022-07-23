@@ -33,11 +33,6 @@ public class Minibus extends Vehicle {
 	}
 
 	@Override
-	public String toString() {
-		return "Vehicle Type: Mini bus\n" + super.toString() + "\nseatingCapacity:" + this.seatingCapacity;
-	}
-
-	@Override
 	public void printSummary() {
 		System.out.println("Vehicle Type: Mini Bus");
 		super.printSummary();
